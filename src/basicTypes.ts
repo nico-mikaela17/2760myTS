@@ -8,7 +8,7 @@ funcParamsButton.addEventListener('click', showExample)
 function showExample() {
     console.log('About to show example...')
   cardTitle.textContent = 'function add(num1: number, num2: number)'
-  cardContent.innerHTML = `<p>some code goes here</p>`
+  cardContent.innerHTML = `{return num1 + num2}`
 }
 
 console.log('This is my Basic Types practice page')
