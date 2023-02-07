@@ -1,1 +1,2 @@
-# TypeScript Examples Website [href:tsexamplesnlinnarz.netlify.app] tsexamplesnlinnarz.netlify.app
+# TypeScript Examples Website 
+[href:tsexamplesnlinnarz.netlify.app] (tsexamplesnlinnarz.netlify.app)
