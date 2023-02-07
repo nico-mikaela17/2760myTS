@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
+<html lang="en" data-theme="lemonade">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Examples</title>
+    <link rel="stylesheet" href="/dist/output.css" />
     <script src="/src/index.ts" type="module" defer></script>
-    <title>Test TS</title>
-</head>
-<body>
-    <h1 class="text-3xl text-red-900 text-center font-bold">Hello this is Test</h1>
-    <div class="text-lg bg-slate-900 text-white" id="counterDiv"></div>
-</body>
+    <script src="/src/basicTypes.ts" type="module" defer></script>
+  </head>
+  <body>
+    <header class="m-8 text-4xl border-4 p-4 outline outline-offset-2">Basic TypeScript Types Examples</header>
+    <main class="flex h-screen">
+      <nav class="w-72 bg-slate-100 mx-8">
+        <ul>
+          <li>
+            <button id="funcParams" class="btn btn-primary">
+              Function Parameter Types
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="bg-slate-100 mx-8 w-screen">
+        <div id="codeExample" class="card">
+          <div class="card-body">
+            <h2 class="card-title"></h2>
+            <div id="cardContent">
+ <!-- here is where the code example gets inserted -->               
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>&copy; Nicole Linnarz 2023 </footer>
+  </body>
 </html>
