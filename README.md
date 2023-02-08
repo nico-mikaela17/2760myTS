@@ -1,3 +1,3 @@
 #MyTypeScript
 
-[href:tsexamplesnlinnarz.netlify.app] (tsexamplesnlinnarz.netlify.app)
+[https://tsexamplesnlinnarz.netlify.app/] (tsexamplesnlinnarz.netlify.app)
