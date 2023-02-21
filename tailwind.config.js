@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'babylonica': ['babylonica', 'cursive']
+      'Staatliches': ['Staatliches', 'cursive']
     },
     extend: {},
   },
