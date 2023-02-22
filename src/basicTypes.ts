@@ -36,6 +36,69 @@ export const objectTypeExample = () => {
     }
 }
 
+export const arrayExample = () => {
+    return {
+        title: `Arrays`,
+        explanation: `To specify the type of an array like [1, 2, 3], you can use the syntax number[]; this syntax works for any type (e.g. string[] is an array of strings, and so on). You may also see this written as Array<number>, which means the same thing. We’ll learn more about the syntax T<U> when we cover generics.`,
+        code: 
+        `<pre data-prefix="1"><code>let obj: any = { x: 0 };</code></pre>
+        <pre data-prefix="2"><code>obj.foo();</code></pre>
+        <pre data-prefix="3"><code>obj();</code></pre>
+        <pre data-prefix="4"><code>obj.bar = 100;</code></pre>
+        <pre data-prefix="5"><code>obj = "hello";</code></pre>
+        <pre data-prefix="6"><code>const n: number = obj;</code></pre>`,
+        
+
+    }
+}
+
+export const tupleExample = () => {
+    return {
+        title: `Tuple`,
+        explanation: `A tuple type is another sort of Array type that knows exactly how many elements it contains, and exactly which types it contains at specific positions. Tuple types are useful in heavily convention-based APIs, where each element’s meaning is “obvious”. This gives us flexibility in whatever we want to name our variables when we destructure them. In the above example, we were able to name elements 0 and 1 to whatever we wanted.`,
+        code: 
+        `<pre data-prefix="1"><code>type StringNumberPair = [string, number];</code></pre>`
+        
+    }
+}
+export const unionExample = () => {
+    return {
+        title: `Union Type`,
+        explanation: `A union type is a type formed from two or more other types, representing values that may be any one of those types. We refer to each of these types as the union’s members. \n A union type is a type formed from two or more other types, representing values that may be any one of those types. We refer to each of these types as the union’s members.`,
+        code: 
+        `<pre data-prefix="1"><code>function printId(id: number | string) {</code></pre>
+        <pre data-prefix="2"><code> if (typeof id === "string") {</code></pre>
+        <pre data-prefix="3"><code>  // In this branch, id is of type 'string'</code></pre>
+        <pre data-prefix="4"><code>  console.log(id.toUpperCase());</code></pre>
+        <pre data-prefix="5"><code> } else {</code></pre>
+        <pre data-prefix="6"><code>  // Here, id is of type 'number'</code></pre>
+        <pre data-prefix="7"><code>  console.log(id);</code></pre>
+        <pre data-prefix="8"><code> }</code></pre>
+        <pre data-prefix="9"><code>}</code></pre>`,
+        
+
+    }
+}
+export const functionExample = () => {
+    return {
+        title: `Function As Type`,
+        explanation: `A union type is a type formed from two or more other types, representing values that may be any one of those types. We refer to each of these types as the union’s members. \n A union type is a type formed from two or more other types, representing values that may be any one of those types. We refer to each of these types as the union’s members.`,
+        code: 
+        `<pre data-prefix="1"><code>function printId(id: number | string) {</code></pre>
+        <pre data-prefix="2"><code> if (typeof id === "string") {</code></pre>
+        <pre data-prefix="3"><code>  // In this branch, id is of type 'string'</code></pre>
+        <pre data-prefix="4"><code>  console.log(id.toUpperCase());</code></pre>
+        <pre data-prefix="5"><code> } else {</code></pre>
+        <pre data-prefix="6"><code>  // Here, id is of type 'number'</code></pre>
+        <pre data-prefix="7"><code>  console.log(id);</code></pre>
+        <pre data-prefix="8"><code> }</code></pre>
+        <pre data-prefix="9"><code>}</code></pre>`,
+        
+
+    }
+}
+
+
 console.log('This is my Basic Types practice page')
 
 // A parameter is a named variable passed into a function
