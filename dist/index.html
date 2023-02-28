@@ -11,14 +11,19 @@
     
     
     
-    <script type="module" crossorigin src="/assets/main-8f9f1c26.js"></script>
-    <link rel="stylesheet" href="/assets/input-b5a4c51b.css">
+    <script type="module" crossorigin src="/assets/main-ac9dac95.js"></script>
+    <link rel="stylesheet" href="/assets/input-43b1ea29.css">
   </head>
   <body>
-    <header class="m-8 text-4xl border-4 p-4 outline outline-offset-2 text-center font-Staatliches">Basic TypeScript Types Examples</header>
+    <header class="m-8 text-4xl border-4 p-4 outline outline-offset-2 border-lime-600 bg-gradient-to-l hover:bg-gradient-to-r from-yellow-300 to-lime-600 text-center font-Staatliches">Basic TypeScript Types Examples</header>
     <main class="flex h-screen">
       <nav class="w-72 mx-8">
         <ul>
+          <li class="my-8 flex justify-center">
+            <button id="funcAsType" class="btn btn-primary">
+              Functions As Types
+            </button>
+          </li>
           <li class="my-8">
             <button id="funcParams" class="btn btn-primary">
               Function Parameter Types
@@ -39,11 +44,7 @@
               Union and Literal Types
             </button>
           </li>
-          <li class="my-8 flex justify-center">
-            <button id="funcAsType" class="btn btn-primary">
-              Functions As Types
-            </button>
-          </li>
+          
         </ul>
       </nav>
       <div id="code-example" class="bg-slate-100 mx-8 w-screen">
@@ -51,7 +52,7 @@
           <div class="card-body">
             <h2 class="card-title"></h2>
             <p id="card-content"></p>
-            <div id="code-content" class="mockup-code">
+            <div id="code-content" class="mockup-code bg-lime-800 text-white">
               <!-- Here is where the preformatted code example is displayed -->
             </div>
           </div>
