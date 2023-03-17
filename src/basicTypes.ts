@@ -1,66 +1,59 @@
 export const functionExample = () => {
     return {
         title: `Function As Type`,
-        explanation: `These types are syntactically similar to arrow functions. It’s common to write a function where the types of the input relate to the type of the output, or where the types of two inputs are related in some way. Let’s consider for a moment a function that returns the first element of an array. In TypeScript, generics are used when we want to describe a correspondence between two values. We do this by declaring a type parameter in the function signature.`,
+        explanation: `The Type System represents the different types of values supported by the language. The Type System checks the validity of the supplied values, before they are stored or manipulated by the program. This ensures that the code behaves as expected. The Type System further allows for richer code hinting and automated documentation too.`,
         code: 
-        `<pre data-prefix="1"><code>function firstElement<Type>(arr: Type[]): Type | undefined {</code></pre>
-        <pre data-prefix="2"><code> return arr[0];</code></pre>
-        <pre data-prefix="3"><code>}</code></pre>`
+        `<pre data-prefix="1"><code>let add: (a: number, b: number) => number =</code></pre>
+        <pre data-prefix="2"><code> function (x: number, y: number) {</code></pre>
+        <pre data-prefix="3"><code>  return x + y;</code></pre>
+        <pre data-prefix="4"><code>};</code></pre>`
 
     }
 }
 export const functionParamsExample = () => {
     return {
-        title: `Data types can be set on function parameters`,
-        explanation: `This is the syntax when indicating the data type of a function parameter.  After the parameter name, add a colon (:), a space, and then the data type you expect.  Be sure to use the primitive data types! (e.g. 'number' instead of 'Number')`,
-        code: `<pre data-prefix="1"><code>function add(num1: number, num2: number) {</code></pre>
-            <pre data-prefix="2"><code>    return num1 + num2</code></pre>
-        <pre data-prefix="3"><code>}</code></pre>`
+        title: `Parameter Types`,
+        explanation: `The TypeScript Parameters Type is used to take the parameters or arguments of a function, and create a new type based on them. It is quite useful when we know that the input of a Function conforms to a certain type, and we want to replicate that.`,
+        code: `<pre data-prefix="1"><code>const myFunction = (a: string, b: string) => {</code></pre>
+        <pre data-prefix="2"><code>  return a + b;</code></pre>
+        <pre data-prefix="3"><code>}</code></pre>
+        <pre data-prefix="4"><code> </code></pre>
+        <pre data-prefix="5"><code>type aType = Parameters<typeof myFunction>[0]</code></pre>
+        <pre data-prefix="6"><code>type bType = Parameters<typeof myFunction>[1]</code></pre>
+        <pre data-prefix="7"><code> </code></pre>
+        <pre data-prefix="8"><code>let a:aType = 'hello '</code></pre>
+        <pre data-prefix="9"><code>let b:bType = 'world'</code></pre>
+        <pre data-prefix="10"><code> </code></pre>
+        <pre data-prefix="11"><code>myFunction(a, b)</code></pre>`
     }
 }
 
 export const objectTypeExample = () => {
     return {
-        title: `Object data type with all properties set`,
-        explanation: `TypeScript can infer the data type of an object if all properties are set, but this example shows how to explicitly set the types of each property.`,
-        code: `<pre data-prefix="1"><code>enum Role {ADMIN, DEV, STUDENT}</code></pre>
-        <pre data-prefix="2"><code></code></pre>
-        <pre data-prefix="3"><code>const sportsCar: {</code></pre>
-        <pre data-prefix="4"><code>  make: string</code></pre>
-        <pre data-prefix="5"><code>  model: string</code></pre>
-        <pre data-prefix="6"><code>  horsepower: number</code></pre>
-        <pre data-prefix="7"><code>  style: string</code></pre>
-        <pre data-prefix="8"><code>  isFast: boolean</code></pre>
-        <pre data-prefix="9"><code>  colors: string[]</code></pre>
-        <pre data-prefix="10"><code>  driver: [number, string]</code></pre>
-        <pre data-prefix="11"><code>  role: Role</code></pre>
-        <pre data-prefix="12"><code>} = {</code></pre>
-        <pre data-prefix="13"><code>  make: 'McLaren',</code></pre>
-        <pre data-prefix="14"><code>  model: '720s',</code></pre>
-        <pre data-prefix="15"><code>  horsepower: 720,</code></pre>
-        <pre data-prefix="16"><code>  style: 'coupe',</code></pre>
-        <pre data-prefix="17"><code>  isFast: true,</code></pre>
-        <pre data-prefix="18"><code>  colors: ['red', 'blue', 'silver'],</code></pre>
-        <pre data-prefix="19"><code>  driver: [1, 'McLaren'],</code></pre>
-        <pre data-prefix="20"><code>  role: Role.ADMIN,</code></pre>
-        <pre data-prefix="21"><code>}</code></pre>`
+        title: `Objects`,
+        explanation: `An object is an instance which contains set of key value pairs. The values can be scalar values or functions or even array of other objects.`,
+        code: `<pre data-prefix="1"><code>var person = {</code></pre>
+        <pre data-prefix="2"><code>  firstName:"Tom",</code></pre>
+        <pre data-prefix="3"><code>  lastName:"Hanks",</code></pre>
+        <pre data-prefix="4"><code>  sayHello:function() {  }  //Type template </code></pre>
+        <pre data-prefix="5"><code>}</code></pre>
+        <pre data-prefix="6"><code>person.sayHello = function() {  </code></pre>
+        <pre data-prefix="7"><code>  console.log("hello "+person.firstName)</code></pre>
+        <pre data-prefix="8"><code>}</code></pre>
+        <pre data-prefix="9"><code>person.sayHello()</code></pre>`
     }
 }
 
 export const arrayExample = () => {
     return {
         title: `Arrays`,
-        explanation: `To specify the type of an array like [1, 2, 3], you can use the syntax number[]; this syntax works for any type (e.g. string[] is an array of strings, and so on). You may also see this written as Array<number>, which means the same thing. We’ll learn more about the syntax T<U> when we cover generics.`,
+        explanation: `An array declaration without the data type is deemed to be of the type any. The type of such an array is inferred from the data type of the array’s first element during initialization.`,
         code: 
-        `<pre data-prefix="1"><code>let obj: any = { x: 0 };</code></pre>
-        <pre data-prefix="2"><code>obj.foo();</code></pre>
-        <pre data-prefix="3"><code>obj();</code></pre>
-        <pre data-prefix="4"><code>obj.bar = 100;</code></pre>
-        <pre data-prefix="5"><code>obj = "hello";</code></pre>
-        <pre data-prefix="6"><code>const n: number = obj;</code></pre>`,
+        `<pre data-prefix="1"><code>var alphas:string[]; </code></pre>
+        <pre data-prefix="2"><code>alphas = ["1","2","3","4"] </code></pre>
+        <pre data-prefix="3"><code>console.log(alphas[0]); </code></pre>
+        <pre data-prefix="4"><code>console.log(alphas[1]);</code></pre>`}
         
-
-    }
 }
 
 export const tupleExample = () => {
@@ -75,19 +68,13 @@ export const tupleExample = () => {
 export const unionExample = () => {
     return {
         title: `Union Type`,
-        explanation: `A union type is a type formed from two or more other types, representing values that may be any one of those types. We refer to each of these types as the union’s members. \n A union type is a type formed from two or more other types, representing values that may be any one of those types. We refer to each of these types as the union’s members.`,
+        explanation: `Union types are a powerful way to express a value that can be one of the several types. Two or more data types are combined using the pipe symbol (|) to denote a Union Type. In other words, a union type is written as a sequence of types separated by vertical bars.`,
         code: 
-        `<pre data-prefix="1"><code>function printId(id: number | string) {</code></pre>
-        <pre data-prefix="2"><code> if (typeof id === "string") {</code></pre>
-        <pre data-prefix="3"><code>  // In this branch, id is of type 'string'</code></pre>
-        <pre data-prefix="4"><code>  console.log(id.toUpperCase());</code></pre>
-        <pre data-prefix="5"><code> } else {</code></pre>
-        <pre data-prefix="6"><code>  // Here, id is of type 'number'</code></pre>
-        <pre data-prefix="7"><code>  console.log(id);</code></pre>
-        <pre data-prefix="8"><code> }</code></pre>
-        <pre data-prefix="9"><code>}</code></pre>`,
-        
-
+        `<pre data-prefix="1"><code>var val;{</code></pre>
+        <pre data-prefix="2"><code>val = 12;</code></pre>
+        <pre data-prefix="3"><code>console.log("numeric value of val " + val);</code></pre>
+        <pre data-prefix="4"><code>val = "This is a string";</code></pre>
+        <pre data-prefix="5"><code>console.log("string value of val " + val);{</code></pre>`
     }
 }
 

@@ -1,4 +1,4 @@
-import { functionParamsExample, objectTypeExample, arrayExample, tupleExample, unionExample, functionExample} from "./basicTypes"
+import { functionParamsExample, objectTypeExample, arrayExample, unionExample, functionExample} from "./basicTypes"
 
 const funcParamsButton = document.querySelector('#funcParams')!
 const objectTypesButton = document.querySelector('#objectTypes')!
@@ -12,11 +12,11 @@ const cardTitle = document.querySelector('.card-title')!
 const cardContent = document.querySelector('#card-content')!
 const codeContent = document.querySelector('#code-content')!
 
+functionButton.addEventListener('click', loadExample.bind(this,functionExample))
 funcParamsButton.addEventListener('click', loadExample.bind(this, functionParamsExample))
 objectTypesButton.addEventListener('click', loadExample.bind(this, objectTypeExample))
-arrayTupleEnumButton.addEventListener('click', loadExample.bind(this,arrayExample,tupleExample))
+arrayTupleEnumButton.addEventListener('click', loadExample.bind(this, arrayExample))
 unionButton.addEventListener('click', loadExample.bind(this,unionExample))
-functionButton.addEventListener('click', loadExample.bind(this,functionExample))
 
 // function showFuncParamsExample() {
 //     const { title, explanation, code } = functionParamsExample()
