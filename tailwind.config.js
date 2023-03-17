@@ -6,7 +6,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'Staatliches': ['Staatliches', 'cursive']
+      'Staatliches': ['Staatliches', 'cursive'],
+      'Rubik': ['Rubik']
     },
     extend: {},
   },

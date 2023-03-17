@@ -37,7 +37,7 @@ const buildLeftNavFromJSON = (block: any) => {
     const listItem = document.createElement('li')
     listItem.classList.add('my-4')
     const navButton = document.createElement('h3')
-    navButton.classList.add('w-72', 'bg-blue-200', 'rounded', 'p-2', 'text-xl', 'text-center', 'cursor-pointer', 'hover:bg-blue-300', 'hover:text-white', 'shadow-md'
+    navButton.classList.add('w-72', 'bg-lime-600', 'rounded', 'p-2', 'text-xl', 'text-center', 'cursor-pointer', 'hover:bg-yellow-400', 'hover:text-black', 'shadow-md'
     )
       navButton.textContent = challenge.title
       listItem.addEventListener('click', () => {
@@ -65,7 +65,7 @@ const buildSnippetDisplay = (challenge: any) => {
   snippetTitle.textContent = snippet.title
   
   const snippetDescription = document.createElement('div')
-  snippetDescription.classList.add('text-2xl', 'text-center')
+  snippetDescription.classList.add('text-2xl', 'text-left', 'ml-5', 'leading-8')
   snippetDescription.innerHTML = snippet.description
 
   snippetDisplay.appendChild(snippetTitle)
