@@ -57,7 +57,6 @@ export const arrayTupleEnumExample = () => {
         explanation2: `A tuple type is another sort of Array type that knows exactly how many elements it contains, and exactly which types it contains at specific positions. Tuple types are useful in heavily convention-based APIs, where each element’s meaning is “obvious”. This gives us flexibility in whatever we want to name our variables when we destructure them. In the above example, we were able to name elements 0 and 1 to whatever we wanted.`,
         code2: `<pre data-prefix="1"><code>type StringNumberPair = [string, number];</code></pre>`
     }
-        
 }
 
 export const unionExample = () => {
@@ -73,76 +72,3 @@ export const unionExample = () => {
     }
 }
 
-
-
-console.log('This is my Basic Types practice page')
-
-// A parameter is a named variable passed into a function
-function add(num1: number, num2: number): number {
-    return num1 + num2
-}
-
-const numberOne = 25
-const numberTwo = 3.5
-
-// an argument is a value (primitve or object) passed as input to a function.
-let result = add(numberOne, numberTwo)
-console.log(result)
-
-enum Role {ADMIN, DEV, STUDENT}
-
-const sportsCar: {
-    make: string;
-    model: string;
-    horsepower: number;
-    style: string;
-    isFast: boolean;
-    colors: string[];
-    driver: [number, string];
-    role: Role;
-} = {
-    make: "McLaren",
-    model: '720s',
-    horsepower: 720,
-    style: 'coupe',
-    isFast: true,
-    colors: ['red', 'blue', 'silver'],
-    driver: [1, 'McLaren'],
-    role: Role.ADMIN,
-}
-
-console.log('My car is one of these', sportsCar)
-
-// Example of typescript union types    
-
-function combine(input1: number | string, input2: number | string) {
-    let result
-    if (typeof input1 === 'number' && typeof input2 === 'number') {
-        result = input1 + input2
-    } else {
-        result = input1.toString() + input2.toString()
-    }
-    return result
-}
-
-console.log(combine(25, 3.5))
-console.log(combine('25', '3.5'))
-
-// Example of typescript literal types
-
-function combine2(input1: number | string, input2: number | string, resultConversion: 'as-number' | 'as-text') {
-    let result
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
-        result = +input1 + +input2
-    } else {
-        result = input1.toString() + input2.toString()
-    }
-    return result
-}
-
-console.log(combine2(25, 3.5, 'as-number'))
-console.log(combine2('25', '3.5', 'as-number'))
-console.log(combine2('25', '3.5', 'as-text'))
-
-// Example of typescript function as type
-//function loadExample(functionExample: () => { title: string, explanation: string, code: string })

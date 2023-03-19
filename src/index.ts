@@ -15,8 +15,6 @@ const cardTitle2 = document.querySelector('.card-title2')!
 const cardContent2 = document.querySelector('#card-content2')!
 const codeContent2 = document.querySelector('#code-content2')!
 
- 
-
 functionButton.addEventListener('click', loadExample.bind(this,functionExample))
 funcParamsButton.addEventListener('click', loadExample.bind(this, functionParamsExample))
 objectTypesButton.addEventListener('click', loadExample.bind(this, objectTypeExample))
