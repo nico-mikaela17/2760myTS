@@ -6,8 +6,8 @@ export const functionExample = () => {
         `<pre data-prefix="1"><code>let add: (a: number, b: number) => number =</code></pre>
         <pre data-prefix="2"><code> function (x: number, y: number) {</code></pre>
         <pre data-prefix="3"><code>  return x + y;</code></pre>
-        <pre data-prefix="4"><code>};</code></pre>`
-
+        <pre data-prefix="4"><code>};</code></pre>`,
+       
     }
 }
 export const functionParamsExample = () => {
@@ -24,7 +24,7 @@ export const functionParamsExample = () => {
         <pre data-prefix="8"><code>let a:aType = 'hello '</code></pre>
         <pre data-prefix="9"><code>let b:bType = 'world'</code></pre>
         <pre data-prefix="10"><code> </code></pre>
-        <pre data-prefix="11"><code>myFunction(a, b)</code></pre>`
+        <pre data-prefix="11"><code>myFunction(a, b)</code></pre>`,
     }
 }
 
@@ -40,11 +40,11 @@ export const objectTypeExample = () => {
         <pre data-prefix="6"><code>person.sayHello = function() {  </code></pre>
         <pre data-prefix="7"><code>  console.log("hello "+person.firstName)</code></pre>
         <pre data-prefix="8"><code>}</code></pre>
-        <pre data-prefix="9"><code>person.sayHello()</code></pre>`
+        <pre data-prefix="9"><code>person.sayHello()</code></pre>`,
     }
 }
 
-export const arrayExample = () => {
+export const arrayTupleEnumExample = () => {
     return {
         title: `Arrays`,
         explanation: `An array declaration without the data type is deemed to be of the type any. The type of such an array is inferred from the data type of the array’s first element during initialization.`,
@@ -52,19 +52,14 @@ export const arrayExample = () => {
         `<pre data-prefix="1"><code>var alphas:string[]; </code></pre>
         <pre data-prefix="2"><code>alphas = ["1","2","3","4"] </code></pre>
         <pre data-prefix="3"><code>console.log(alphas[0]); </code></pre>
-        <pre data-prefix="4"><code>console.log(alphas[1]);</code></pre>`}
+        <pre data-prefix="4"><code>console.log(alphas[1]);</code></pre>`,
+        title2: `Tuple`,
+        explanation2: `A tuple type is another sort of Array type that knows exactly how many elements it contains, and exactly which types it contains at specific positions. Tuple types are useful in heavily convention-based APIs, where each element’s meaning is “obvious”. This gives us flexibility in whatever we want to name our variables when we destructure them. In the above example, we were able to name elements 0 and 1 to whatever we wanted.`,
+        code2: `<pre data-prefix="1"><code>type StringNumberPair = [string, number];</code></pre>`
+    }
         
 }
 
-export const tupleExample = () => {
-    return {
-        title: `Tuple`,
-        explanation: `A tuple type is another sort of Array type that knows exactly how many elements it contains, and exactly which types it contains at specific positions. Tuple types are useful in heavily convention-based APIs, where each element’s meaning is “obvious”. This gives us flexibility in whatever we want to name our variables when we destructure them. In the above example, we were able to name elements 0 and 1 to whatever we wanted.`,
-        code: 
-        `<pre data-prefix="1"><code>type StringNumberPair = [string, number];</code></pre>`
-        
-    }
-}
 export const unionExample = () => {
     return {
         title: `Union Type`,
