@@ -19,6 +19,7 @@ const prevButton = document.querySelector('#prev')! as HTMLButtonElement
 const challengeVidBtn = document.querySelector('#challengeVidBtn')!
 const nextButton = document.querySelector('#next')! as HTMLButtonElement
 const topMenu = document.querySelector('.menu')!
+const main = document.querySelector('main')!
 
 interface VideoDisplayer {
   videoUrl: string
@@ -183,7 +184,7 @@ prevButton.addEventListener('click', () => {
   }
 })
 
-/* const buildSnippetDisplay = (challenge: any) => {
+const buildSnippetDisplay = (challenge: any) => {
     const snippet = new CodeSnippet(challenge.title, challenge.description, challenge.instructions, challenge.videoUrl)
     const displayCard = document.createElement('div')
     displayCard.classList.add('bg-white', 'rounded', 'shadow-md', 'p-4', 'm-4', 'w-full')
@@ -199,4 +200,4 @@ prevButton.addEventListener('click', () => {
     displayCard.appendChild(title)
     main.appendChild(displayCard)
 }
-buildSnippetDisplay(blocksArray[0].challenges[0]) */
+buildSnippetDisplay(blocksArray[0].challenges[0]) 
