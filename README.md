@@ -1,3 +1,3 @@
 #MyTypeScript
 
-https://tsexamplesnlinnarz.netlify.app/
+https://nlinnarztsexamples.netlify.app/
