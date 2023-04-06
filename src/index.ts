@@ -11,9 +11,6 @@ const functionButton = document.querySelector('#funcAsType',)!
 const cardTitle = document.querySelector('.card-title')!
 const cardContent = document.querySelector('#card-content')!
 const codeContent = document.querySelector('#code-content')!
-const cardTitle2 = document.querySelector('.card-title2')!
-const cardContent2 = document.querySelector('#card-content2')!
-const codeContent2 = document.querySelector('#code-content2')!
 
 functionButton.addEventListener('click', loadExample.bind(this,functionExample))
 funcParamsButton.addEventListener('click', loadExample.bind(this, functionParamsExample))
@@ -35,13 +32,9 @@ unionButton.addEventListener('click', loadExample.bind(this,unionExample))
 //     codeContent.innerHTML = code
 // }
 
-function loadExample(functionExample: () => { title: string, explanation: string, code: string, title2: string, explanation2: string, code2: string }) {
-    const { title, explanation, code, title2, explanation2, code2} = functionExample()
+function loadExample(functionExample: () => { title: string, explanation: string, code: string, }) {
+    const { title, explanation, code} = functionExample()
     cardTitle.textContent = title
     cardContent.textContent = explanation
     codeContent.innerHTML = code
-    cardTitle2.textContent = title2
-    cardContent2.textContent = explanation2
-    codeContent2.innerHTML = code2
-
 }
