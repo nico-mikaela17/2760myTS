@@ -19,7 +19,6 @@ const prevButton = document.querySelector('#prev')! as HTMLButtonElement
 const challengeVidBtn = document.querySelector('#challengeVidBtn')!
 const nextButton = document.querySelector('#next')! as HTMLButtonElement
 const topMenu = document.querySelector('.menu')!
-const main = document.querySelector('main')!
 
 
 interface VideoDisplayer {
