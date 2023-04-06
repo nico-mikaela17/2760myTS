@@ -14,21 +14,24 @@
     <script src="interfaces.ts" type="module" defer></script>
 </head>
 <body>
-  <h1 class="m-8 text-4xl border-4 p-4 outline outline-offset-2 border-lime-600 bg-gradient-to-l hover:bg-gradient-to-r from-yellow-300 to-lime-600 text-center font-Staatliches">Example of a TypeScript Interface</h1>
+  
     <nav class="navbar">
-
-    <ul class="menu menu-horizontal rounded-box">
-       <li class="flex space-x-4 px-3"></li> 
-    </ul>
+        <h1 class="m-8 text-4xl border-4 p-4 outline outline-offset-2 border-lime-600 bg-gradient-to-l hover:bg-gradient-to-r from-yellow-300 to-lime-600 text-center font-Staatliches">Example of a TypeScript Interface</h1>
+        <ul class="menu menu-horizontal rounded-box">
+            <li class="flex space-x-4">
+            </li> 
+        </ul>
     </nav>  
     <main>
-        <div class="displayFrame">
+        <div class="displayFrame place-content-center">
+            <h2 id="challengeVidBtn" class="text-center">Challenge Video</h2>
             <iframe id="challengeVid" class="w-[1024px] h-[720px]"></iframe>
+            
         </div>
         <div class="btn-group grid grid-cols-5 gap-4">
             <button id="prev" class="btn btn-outline bg-lime-600 text-white">Previous video</button>
             <div class="text-center col-span-3">
-                <h2 id="challengeVidBtn" class="text-center">Challenge Video</h2>
+                
             </div>
             <button id="next" class="btn btn-outline bg-lime-600 text-white">Next video</button>
         </div>

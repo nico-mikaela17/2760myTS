@@ -21,6 +21,7 @@ const nextButton = document.querySelector('#next')! as HTMLButtonElement
 const topMenu = document.querySelector('.menu')!
 const main = document.querySelector('main')!
 
+
 interface VideoDisplayer {
   videoUrl: string
   display(theFrame: HTMLIFrameElement): void
@@ -87,9 +88,9 @@ const populateMenu = (arrayOfBlocks: any[]) => {
     menuLink.addEventListener('click', () => {
       const allMenuLinks = document.querySelectorAll('.menu li a')
       allMenuLinks.forEach((link) => {
-        link.classList.remove('active')
+        link.classList.remove('active','bg-lime-600')
       })
-      menuLink.classList.add('active')
+      menuLink.classList.add('active','bg-lime-600', 'px-2')
       currentBlock = block?.meta?.name
       const snippet = getCurrentSnippet(currentBlock)
       if (snippet) {
@@ -184,7 +185,7 @@ prevButton.addEventListener('click', () => {
   }
 })
 
-const buildSnippetDisplay = (challenge: any) => {
+/*const buildSnippetDisplay = (challenge: any) => {
     const snippet = new CodeSnippet(challenge.title, challenge.description, challenge.instructions, challenge.videoUrl)
     const displayCard = document.createElement('div')
     displayCard.classList.add('bg-white', 'rounded', 'shadow-md', 'p-4', 'm-4', 'w-full')
@@ -200,4 +201,4 @@ const buildSnippetDisplay = (challenge: any) => {
     displayCard.appendChild(title)
     main.appendChild(displayCard)
 }
-buildSnippetDisplay(blocksArray[0].challenges[0]) 
+buildSnippetDisplay(blocksArray[0].challenges[0])*/
