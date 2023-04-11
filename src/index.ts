@@ -35,6 +35,6 @@ unionButton.addEventListener('click', loadExample.bind(this,unionExample))
 function loadExample(functionExample: () => { title: string, explanation: string, code: string, }) {
     const { title, explanation, code} = functionExample()
     cardTitle.textContent = title
-    cardContent.textContent = explanation
+    cardContent.innerHTML = explanation
     codeContent.innerHTML = code
 }
