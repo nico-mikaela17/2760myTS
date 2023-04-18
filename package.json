@@ -13,6 +13,8 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
-    "daisyui": "^2.50.0"
+    "daisyui": "^2.50.0",
+    "highlight": "^0.2.4",
+    "highlight.js": "^11.7.0"
   }
 }
