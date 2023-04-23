@@ -47,7 +47,7 @@ export const objectTypeExample = () => {
 export const arrayTupleEnumExample = () => {
     return {
         title: `Array, Tuple, and Enum`,
-        explanation: `An array declaration without the data type is deemed to be of the type any. The type of such an array is inferred from the data type of the array’s first element during initialization. <br><br> A tuple type is another sort of Array type that knows exactly how many elements it contains, and exactly which types it contains at specific positions. Tuple types are useful in heavily convention-based APIs, where each element’s meaning is “obvious”. This gives us flexibility in whatever we want to name our variables when we destructure them. In the above example, we were able to name elements 0 and 1 to whatever we wanted.`,
+        explanation: `An array declaration without the data type is deemed to be of the type any. The type of such an array is inferred from the data type of the array’s first element during initialization. <br><br> A tuple type is another sort of Array type that knows exactly how many elements it contains, and exactly which types it contains at specific positions. Tuple types are useful in heavily convention-based APIs, where each element’s meaning is “obvious”. This gives us flexibility in whatever we want to name our variables when we destructure them. In the above example, we were able to name elements 0 and 1 to whatever we wanted.<br><br> An enum is a data type that allows you to define a set of named constants, where each constant is associated with a numeric value. Enums provide a way to represent a finite set of values in a more readable and expressive way.`,
         code: 
         `<pre data-prefix="1"><code class="font-bold text-lime-400">ARRAY</code></pre>
         <pre data-prefix="2"><code>var alphas:string[]; </code></pre>
@@ -61,21 +61,47 @@ export const arrayTupleEnumExample = () => {
         <pre data-prefix="10"><code>console.log(myTuple[0]); // Output: "Hello"</code></pre>
         <pre data-prefix="11"><code>console.log(myTuple[1]); // Output: 123</code></pre>
         <pre data-prefix="12"><code>console.log(myTuple[2]); // Output: true</code></pre>
-
+        <pre data-prefix="13"><code></code></pre>
+        <pre data-prefix="14"><code class="font-bold text-lime-400">ENUM</code></pre>
+        <pre data-prefix="15"><code>enum Direction {</code></pre>
+        <pre data-prefix="16"><code> Up = 1,</code></pre>
+        <pre data-prefix="17"<code> Down,</code></pre>
+        <pre data-prefix="18"><code> Left,</code></pre>
+        <pre data-prefix="19"><code> Right</code></pre>
+        <pre data-prefix="20"><code>}</code></pre>
+        <pre data-prefix="21"><code>let myDirection: Direction = Direction.Up;</code></pre>
+        <pre data-prefix="22"><code>if (myDirection === Direction.Up) {</code></pre>
+        <pre data-prefix="23"><code> console.log("Going up!");</code></pre>
+        <pre data-prefix="24"><code>} else {</code></pre>
+        <pre data-prefix="25"><code> console.log("Going somewhere else...");</code></pre>
+        <pre data-prefix="26"><code>}</code></pre>
         `,
     }
 }
 
 export const unionExample = () => {
     return {
-        title: `Union Type`,
-        explanation: `Union types are a powerful way to express a value that can be one of the several types. Two or more data types are combined using the pipe symbol (|) to denote a Union Type. In other words, a union type is written as a sequence of types separated by vertical bars.`,
+        title: `Union and Literal Types`,
+        explanation: `Union types are a powerful way to express a value that can be one of the several types. Two or more data types are combined using the pipe symbol (|) to denote a Union Type. In other words, a union type is written as a sequence of types separated by vertical bars.<br><br> A literal type is a type that represents a specific value. Literal types are defined using a literal value, such as a string or a number`,
         code: 
-        `<pre data-prefix="1"><code>var val;{</code></pre>
-        <pre data-prefix="2"><code>val = 12;</code></pre>
-        <pre data-prefix="3"><code>console.log("numeric value of val " + val);</code></pre>
-        <pre data-prefix="4"><code>val = "This is a string";</code></pre>
-        <pre data-prefix="5"><code>console.log("string value of val " + val);{</code></pre>`
+        `
+        <pre data-prefix="1"><code class="font-bold text-lime-400">UNION</code></pre>
+        <pre data-prefix="2"><code>let myVar: string | number;</code></pre>
+        <pre data-prefix="3"><code></code></pre>
+        <pre data-prefix="4"><code>interface Person {</code></pre>
+        <pre data-prefix="5"><code> name: string;</code></pre>
+        <pre data-prefix="6"><code> age: number | null;{</code></pre>
+        <pre data-prefix="7"><code>}</code></pre>
+        <pre data-prefix="8"><code>function printId(id: number | string) {</code></pre>
+        <pre data-prefix="9"><code> console.log('Your ID is: $'{id}'');</code></pre>
+        <pre data-prefix="10"><code>}</code></pre>
+        <pre data-prefix="11"><code></code></pre>
+        <pre data-prefix="12"><code class="font-bold text-lime-400">LITERAL</code></pre>
+        <pre data-prefix="13"><code>interface Person {</code></pre>
+        <pre data-prefix="14"><code> name: string;</code></pre>
+        <pre data-prefix="15"><code> age: 18 | 21 | 30;{</code></pre>
+        <pre data-prefix="16"><code>}</code></pre>
+        `
     }
 }
 

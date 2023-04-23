@@ -38,3 +38,4 @@ function loadExample(functionExample: () => { title: string, explanation: string
     cardContent.innerHTML = explanation
     codeContent.innerHTML = code
 }
+
