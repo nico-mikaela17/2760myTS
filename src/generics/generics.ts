@@ -22,6 +22,44 @@ const reversedNumberArray = reverse&lt;number&gt;(numberArray)
 console.log(reversedNumberArray)</code>`
 }
 
+const genericSample2 = {
+    title: 'Generic Constraints',
+    explanation: `In TypeScript, generic constraints allow you to restrict the types that can be used as arguments to a generic function. This helps ensure that the function is only used with types that meet certain requirements.
+    To define a generic constraint, you can use the extends keyword, followed by the type or interface that the generic type parameter must extend.
+    <br><br>
+    Generic constraints are useful when you want to ensure that a generic function can only be called with types that meet certain requirements, such as having specific properties or methods. This helps prevent runtime errors and improves the type safety of your code.`,
+    code: `<code>interface Person {
+        name: string;
+        age: number;
+      }
+      
+      function getPersonName<T extends Person>(person: T): string {
+        return person.name;
+      }</code>`
+}
+
+const genericSample3 = {
+    title: 'Generic Type T',
+    explanation: `This class takes a generic type T. We can create a new instance of this class and pass in a number or a string. The type of the value property will be set to whatever type we pass in.`,
+    code: `<code>class DataStorage<T> {
+        data: T
+    
+        constructor(data: T) {
+            this.data = data
+        }
+    
+        getData(): T {
+            return this.data
+        }
+    }
+    
+    const textStorage = new DataStorage<string>('Hello World')
+    console.log(textStorage.getData())
+    
+    const numberStorage = new DataStorage<number>(2034809230948)
+    console.log(numberStorage.getData())</code>`
+}
+
 const genericButton1 = document.createElement('button')
 genericButton1.classList.add('btn')
 genericButton1.textContent = genericSample1.title
@@ -32,10 +70,34 @@ genericButton1.addEventListener('click', () => {
     hljs.highlightAll()
 })
 
+const genericButton2 = document.createElement('button')
+genericButton2.classList.add('btn')
+genericButton2.textContent = genericSample2.title
+
+genericButton2.addEventListener('click', () => {
+    descriptionArea.innerHTML = genericSample2.explanation
+    codeSampleArea.innerHTML = genericSample2.code
+    hljs.highlightAll()
+})
+
+const genericButton3 = document.createElement('button')
+genericButton3.classList.add('btn')
+genericButton3.textContent = genericSample2.title
+
+genericButton3.addEventListener('click', () => {
+    descriptionArea.innerHTML = genericSample3.explanation
+    codeSampleArea.innerHTML = genericSample3.code
+    hljs.highlightAll()
+})
+
 // make two more of these buttons for the other two samples
 
 document.addEventListener('DOMContentLoaded', () => {
     keyboard.appendChild(genericButton1)
+    keyboard.appendChild(genericButton2)
+    keyboard.appendChild(genericButton3)
+
+
     // append the other two buttons here
 })
 
