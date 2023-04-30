@@ -61,7 +61,7 @@ const genericSample3 = {
 }
 
 const genericButton1 = document.createElement('button')
-genericButton1.classList.add('btn')
+genericButton1.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300')
 genericButton1.textContent = genericSample1.title
 
 genericButton1.addEventListener('click', () => {
@@ -71,7 +71,7 @@ genericButton1.addEventListener('click', () => {
 })
 
 const genericButton2 = document.createElement('button')
-genericButton2.classList.add('btn')
+genericButton2.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300')
 genericButton2.textContent = genericSample2.title
 
 genericButton2.addEventListener('click', () => {
@@ -81,7 +81,7 @@ genericButton2.addEventListener('click', () => {
 })
 
 const genericButton3 = document.createElement('button')
-genericButton3.classList.add('btn')
+genericButton3.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300')
 genericButton3.textContent = genericSample2.title
 
 genericButton3.addEventListener('click', () => {
