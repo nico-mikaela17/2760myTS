@@ -84,7 +84,7 @@ genericButton2.addEventListener('click', () => {
 
 const genericButton3 = document.createElement('button')
 genericButton3.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300', 'mx-6')
-genericButton3.textContent = genericSample2.title
+genericButton3.textContent = genericSample3.title
 
 genericButton3.addEventListener('click', () => {
     descriptionArea.innerHTML = genericSample3.explanation
