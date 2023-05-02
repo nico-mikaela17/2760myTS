@@ -75,7 +75,7 @@ const buildSnippetDisplay = (challenge: any) => {
   snippetDescription.innerHTML = snippet.description
 
   const snippetInstructions= document.createElement('div')
-  snippetInstructions.classList.add('mockup-code', 'bg-lime-800', 'text-white', 'text-2xl', 'text-left', 'ml-5', 'px-3', 'leading-8')
+  snippetInstructions.classList.add('mockup-code', 'bg-lime-800', 'text-white', 'text-2xl', 'text-left', 'ml-5', 'mt-5','px-3', 'leading-8')
   snippetInstructions.innerHTML = snippet.instructions
 
   snippetDisplay.appendChild(snippetTitle)
