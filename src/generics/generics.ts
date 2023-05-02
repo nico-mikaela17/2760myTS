@@ -4,6 +4,8 @@ const descriptionArea = document.querySelector('.description .text-xl') as HTMLP
 const codeSampleArea = document.querySelector('.code-sample .text-xl') as HTMLPreElement
 const keyboard = document.querySelector('.keyboard') as HTMLDivElement
 
+
+
 const genericSample1 = {
     title: 'Generic Functions',
     explanation: `This reverse function takes an array of any type (as indicated by <T>) and returns an array of the same type. It does not matter if we call this function with an array of strings or an array of numbers. The type of the array that is returned will be the same as the type of the array that is passed in.
@@ -61,7 +63,7 @@ const genericSample3 = {
 }
 
 const genericButton1 = document.createElement('button')
-genericButton1.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300')
+genericButton1.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300', 'mx-6')
 genericButton1.textContent = genericSample1.title
 
 genericButton1.addEventListener('click', () => {
@@ -71,7 +73,7 @@ genericButton1.addEventListener('click', () => {
 })
 
 const genericButton2 = document.createElement('button')
-genericButton2.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300')
+genericButton2.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300', 'mx-6')
 genericButton2.textContent = genericSample2.title
 
 genericButton2.addEventListener('click', () => {
@@ -81,7 +83,7 @@ genericButton2.addEventListener('click', () => {
 })
 
 const genericButton3 = document.createElement('button')
-genericButton3.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300')
+genericButton3.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300', 'mx-6')
 genericButton3.textContent = genericSample2.title
 
 genericButton3.addEventListener('click', () => {
