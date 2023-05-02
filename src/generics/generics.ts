@@ -61,9 +61,8 @@ const genericSample3 = {
     const numberStorage = new DataStorage<number>(2034809230948)
     console.log(numberStorage.getData())</code>`
 }
-
 const genericButton1 = document.createElement('button')
-genericButton1.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300', 'mx-6')
+genericButton1.classList.add('btn','bg-lime-700', 'text-white','border-yellow-300', 'mx-6')
 genericButton1.textContent = genericSample1.title
 
 genericButton1.addEventListener('click', () => {
@@ -71,6 +70,9 @@ genericButton1.addEventListener('click', () => {
     codeSampleArea.innerHTML = genericSample1.code
     hljs.highlightAll()
 })
+
+// make two more of these buttons for the other two samples
+
 
 const genericButton2 = document.createElement('button')
 genericButton2.classList.add('btn', 'bg-lime-700', 'text-white','border-yellow-300', 'mx-6')
@@ -103,55 +105,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // append the other two buttons here
 })
 
-// Generic Sample 1.  This reverse function takes an array of any type (as indicated by <T>) and returns an array of the same type
-
-function reverse<T>(array: T[]): T[] {
-    return array.reverse()
-}
-
-const stringArray = ['key lime', 'cherry', 'lemon']
-const reversedStringArray = reverse<string>(stringArray)
-console.log(reversedStringArray)
-
-const numberArray = [1342, 2654, 345676]
-const reversedNumberArray = reverse<number>(numberArray)
-console.log(reversedNumberArray)
-
-// Generic Sample 2.  This class takes a generic type T. We can create a new instance of this class and pass in a number or a string. The type of the value property will be set to whatever type we pass in.
-
-class DataStorage<T> {
-    data: T
-
-    constructor(data: T) {
-        this.data = data
-    }
-
-    getData(): T {
-        return this.data
-    }
-}
-
-const textStorage = new DataStorage<string>('Hello World')
-console.log(textStorage.getData())
-
-const numberStorage = new DataStorage<number>(2034809230948)
-console.log(numberStorage.getData())
-
-// Generic Sample 3.  Generic Constraints. This example shows how to use generic constraints. First, we define an interface to indicate that whenever we define a generic type that uses the hasAge interface, we can expect it will have an age property.  If not, an exception will be thrown.
-
-interface hasAge {
-    age: number
-}
-
-function getTotalAge<T extends hasAge>(people: T[]): number {
-    return people.reduce((total, person) => total + person.age, 0)
-}
-
-const people = [
-    { name: 'John', age: 30 },
-    { name: 'Sally', age: 25 },
-    { name: 'Bob', age: 40 }
-]
-
-const totalAge = getTotalAge<hasAge>(people)
-console.log(totalAge)
