@@ -39,10 +39,16 @@ const buildLeftNavFromJSON = (block: any) => {
     const navButton = document.createElement('h3')
     navButton.classList.add('w-72', 'bg-lime-600', 'rounded', 'p-2', 'text-xl', 'text-center', 'cursor-pointer', 'hover:bg-yellow-400', 'hover:text-black', 'shadow-md', 'hover:motion-safe:animate-pulse'
     )
+  
       navButton.textContent = challenge.title
       listItem.addEventListener('click', () => {
           buildSnippetDisplay(challenge)
-      })
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          });
+      
     listItem.appendChild(navButton)
     navList.appendChild(listItem)
   })
